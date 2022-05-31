@@ -2,6 +2,7 @@ package com.example.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.example.model.Aluno;
@@ -37,7 +38,14 @@ public class AlunoDAO {
     public void fazerLogin(long matricula,String senha){
 
         try{
-            
+            String sql = "SELECT FROM matricula WHERE matricula = ?";
+            conexao = new ConnectionFactory ().getConnection();
+            pst = conexao.prepareStatement(sql);
+            pst.setLong(1, matricula);
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()){
+                
+            }
         }catch(Exception e){
 
         }
