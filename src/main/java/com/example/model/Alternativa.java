@@ -15,12 +15,13 @@ public class Alternativa {
      * @param cq // codigo da questao
      */
     
-    public Alternativa(char l,String r,int cq){
-        letra = l;
-        resposta = r;
-        eh_correta = false; // seta como true caso a questao for a correta
-        cod_questao = cq;
+    public Alternativa(char l,String r, boolean eh_correta, int cq){
+        this.letra = l;
+        this.resposta = r;
+        this.eh_correta = eh_correta;
+        this.cod_questao = cq;
     }
+
 
     public char getLetra() {
         return letra;

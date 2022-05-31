@@ -1,10 +1,7 @@
 package com.example.controller;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-
 import com.example.dao.QuestaoDAO;
-import com.example.model.Alternativa;
 import com.example.model.Questao;
 
 public class QuestaoController {
@@ -18,12 +15,10 @@ public class QuestaoController {
      * @param alternativaCorreta // a alternativa correta 
      * @throws SQLException
      */
-    public void criarQuestao(int codigo, String enun, long mat, ArrayList<Alternativa> listAlternativas, int alternativaCorreta) throws SQLException{
+    public void criarQuestao(String enun, long mat) throws SQLException{
 
         QuestaoDAO questaoDAO = new QuestaoDAO();
-        questaoDAO.criarQuestao(new Questao(codigo,enun,mat,listAlternativas,alternativaCorreta));
-        
-
+        questaoDAO.criarQuestao(new Questao(enun,mat));
         
     }
 
