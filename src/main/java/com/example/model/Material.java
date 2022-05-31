@@ -6,9 +6,14 @@ public class Material {
     private String tipo;
     private long mat_professor;
 
-    public Material(String t,long m){
-        tipo = t;
-        mat_professor = m;
+    /**
+     * 
+     * @param tipo
+     * @param matricula
+     */
+    public Material(String tipo, long matricula){
+        this.tipo = tipo;
+        mat_professor = matricula;
     }
 
 
