@@ -7,9 +7,14 @@ public class Material {
     private long mat_professor;
     private String conteudo;
 
-    public Material(String t,long m,String conteudo){
-        tipo = t;
-        mat_professor = m;
+    /**
+     * 
+     * @param tipo
+     * @param matricula
+     */
+    public Material(String tipo, long matricula,String conteudo){
+        this.tipo = tipo;
+        mat_professor = matricula;
     }
 
 
