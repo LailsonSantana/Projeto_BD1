@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import com.example.model.Aluno;
 
+import javafx.event.ActionEvent;
+
 public class AlunoDAO {
 
     private PreparedStatement pst;
@@ -14,7 +16,7 @@ public class AlunoDAO {
 
     public void cadastrarAluno(Aluno a) throws SQLException{
 
-        String sql= "insert into alunos (nome,matricula,senha,acess) values (?,?,?,?)";
+        String sql= "insert into alunos (nome,matricula,senha) values (?,?,?,?)";
 
         try{
             conexao = new ConnectionFactory ().getConnection();
@@ -35,6 +37,7 @@ public class AlunoDAO {
         }
     }
 
+    
     public void fazerLogin(long matricula,String senha){
 
         try{
@@ -44,7 +47,7 @@ public class AlunoDAO {
             pst.setLong(1, matricula);
             ResultSet rs = pst.executeQuery();
             while(rs.next()){
-                
+                System.out.println(rs.getLong(1));
             }
         }catch(Exception e){
 

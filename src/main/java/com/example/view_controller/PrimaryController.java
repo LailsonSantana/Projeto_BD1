@@ -8,8 +8,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import javax.swing.Action;
+
+import com.example.controller.AlunoController;
 import com.example.controller.ProfessorController;
+import com.example.controller.TurmaController;
+import com.example.dao.AlunoDAO;
 import com.example.dao.ConnectionFactory;
+import com.example.dao.ProfessorDAO;
+import com.example.model.Aluno;
 import com.example.model.Professor;
 
 import javafx.event.ActionEvent;
@@ -24,6 +31,13 @@ public class PrimaryController implements Initializable{
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         
+        
+    }
+
+    public void teste(ActionEvent event) throws SQLException{
+        
+        ProfessorDAO pf = new ProfessorDAO();
+        pf.fazerLogin(647,"gehreh");
         
     }
 

@@ -1,10 +1,14 @@
 package com.example.dao;
 
+import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.example.model.Professor;
+
+import javafx.event.ActionEvent;
 
 public class ProfessorDAO {
 
@@ -33,5 +37,27 @@ public class ProfessorDAO {
                 conexao.close();
         }
     }
-    
+
+    public void fazerLogin(long matricula,String senha){
+
+        try{
+            String sql = "SELECT senha FROM professores WHERE matricula = " + matricula;
+           
+            
+            conexao = new ConnectionFactory().getConnection();
+            java.sql.Statement s = conexao.createStatement();
+            
+            ResultSet rs = s.executeQuery(sql);
+            while(rs.next()){
+                if(rs.getString("senha").equals(senha)){
+                    System.out.println("LOGIN APROVADO");
+                }
+                else{
+                    System.out.println("SENHA INCORRETA");
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }

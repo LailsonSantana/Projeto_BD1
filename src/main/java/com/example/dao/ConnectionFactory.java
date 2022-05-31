@@ -10,7 +10,7 @@ public class ConnectionFactory {
     private static final String USERNAME = "postgres";
 
     //Senha do banco de dados postgres
-    private static final String PASSWORD = "admin";
+    private static final String PASSWORD = "vasco123";
 
     //Caminho do BD
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/MoreEducation";
