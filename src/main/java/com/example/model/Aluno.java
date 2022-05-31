@@ -7,10 +7,17 @@ public class Aluno {
     private String senha;
     private byte acess;
 
-    public Aluno(String n,long m , String s){
-        nome = n;
-        matricula = m;
-        senha = s;
+    /**
+     * 
+     * @param nome // nome do aluno
+     * @param matricula // matricula do aluno
+     * @param senha // senha de acesso do aluno
+     */
+    
+    public Aluno(String nome,long matricula , String senha){
+        this.nome = nome;
+        this.matricula = matricula;
+        this.senha = senha;
     }
 
     public long getMatricula() {

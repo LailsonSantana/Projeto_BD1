@@ -7,10 +7,18 @@ public class Alternativa {
     private boolean eh_correta;
     private int cod_questao;
 
-    public Alternativa(char l,String r,boolean ec,int cq){
+    /**
+     * 
+     * @param l // letra indentificadora
+     * @param r // resposta da alternativa
+     * @param ec // boolean se a questao eh verdadeira
+     * @param cq // codigo da questao
+     */
+    
+    public Alternativa(char l,String r,int cq){
         letra = l;
         resposta = r;
-        eh_correta = ec;
+        eh_correta = false; // seta como true caso a questao for a correta
         cod_questao = cq;
     }
 
