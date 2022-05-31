@@ -33,5 +33,15 @@ public class AlunoDAO {
                 conexao.close();
         }
     }
+
+    public void fazerLogin(long matricula,String senha){
+
+        try{
+            
+        }catch(Exception e){
+
+        }
+
+    }
     
 }
