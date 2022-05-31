@@ -5,8 +5,9 @@ public class Material {
     private int codigo;
     private String tipo;
     private long mat_professor;
+    private String conteudo;
 
-    public Material(String t,long m){
+    public Material(String t,long m,String conteudo){
         tipo = t;
         mat_professor = m;
     }
@@ -31,6 +32,14 @@ public class Material {
         this.mat_professor = mat_professor;
     }
 
-    
-    
+
+    public String getConteudo() {
+        return conteudo;
+    }
+
+
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+  
 }

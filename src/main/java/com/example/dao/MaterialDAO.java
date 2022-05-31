@@ -13,7 +13,7 @@ public class MaterialDAO {
 
     public void criarMaterial(Material m){
 
-        String sql= "insert into materais (tipo,mat_professor_m) values (?,?)";
+        String sql= "insert into materais (tipo,mat_professor_m,conteudo) values (?,?,?)";
 
         try{
             conexao = new ConnectionFactory ().getConnection();
@@ -21,8 +21,23 @@ public class MaterialDAO {
             
             pst.setString(1,m.getTipo().toUpperCase());
             pst.setLong(2, m.getMat_professor());
+            pst.setString(3, m.getConteudo());
             pst.execute();
         }catch(SQLException e){
+            e.getMessage();
+        }
+    }
+
+    public void removerMaterial(int codMaterial){
+
+        String sql = "DELETE FROM materais WHERE cod_material = ?";
+
+        try{
+            conexao = new ConnectionFactory ().getConnection();
+            pst = conexao.prepareStatement(sql);
+            pst.setInt(1,codMaterial);
+
+        }catch(Exception e){
             e.getMessage();
         }
     }
