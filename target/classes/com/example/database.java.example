@@ -1,0 +1,29 @@
+package com.example;
+
+public class database {
+    private String admin;
+    private String senha;
+
+    public database(String admin, String senha){
+        this.admin = "";
+        this.senha = "";
+    }
+
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    
+}

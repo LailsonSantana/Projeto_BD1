@@ -2,6 +2,8 @@ package com.example.model;
 
 import java.util.ArrayList;
 
+import com.example.dao.ConnectionFactory;
+
 public class Questao {
 
     private int codigo;
@@ -20,15 +22,13 @@ public class Questao {
      */
 
     public Questao(int codigo, String enun, long mat, ArrayList<Alternativa> listAlternativas, int alternativaCorreta){
-        this.codigo = 00;
         this.enunciado   = enun;
         this.mat_prof    = mat;
         this.listAlternativas = listAlternativas;
         this.alternativaCorreta = listAlternativas.get(alternativaCorreta);
-
     }
 
-    
+
     public ArrayList<Alternativa> getListAlternativas() {
         return listAlternativas;
     }

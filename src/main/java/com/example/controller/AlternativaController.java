@@ -7,10 +7,10 @@ import com.example.model.Alternativa;
 
 public class AlternativaController {
 
-    public void criarAlternativa(char l,String r,boolean ec,int cq) throws SQLException{
+    public void criarAlternativa(char l,String r,int cq) throws SQLException{
 
         AlternativaDAO alternativaDAO = new AlternativaDAO();
-        alternativaDAO.criarAlternativa(new Alternativa(l, r, ec, cq));
+        alternativaDAO.criarAlternativa(new Alternativa(l, r, cq));
         System.out.println("CADASTRAR CHAMADO");
         
     }

@@ -22,6 +22,7 @@ public class MaterialDAO {
             pst.setString(1,m.getTipo().toUpperCase());
             pst.setLong(2, m.getMat_professor());
             pst.execute();
+            
         }catch(SQLException e){
             e.getMessage();
         }

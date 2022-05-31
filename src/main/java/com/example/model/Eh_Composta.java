@@ -26,5 +26,4 @@ public class Eh_Composta {
         this.cod_avaliacao = cod_avaliacao;
     }
 
-    
 }
