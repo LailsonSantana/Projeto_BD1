@@ -20,6 +20,8 @@ public class Professor {
         this.senha = senha;
     }
 
+    
+
     public long getMatricula() {
         return matricula;
     }

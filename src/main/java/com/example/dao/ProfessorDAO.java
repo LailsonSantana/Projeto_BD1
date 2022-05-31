@@ -1,6 +1,5 @@
 package com.example.dao;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +7,6 @@ import java.sql.SQLException;
 
 import com.example.model.Professor;
 
-import javafx.event.ActionEvent;
 
 public class ProfessorDAO {
 

@@ -13,20 +13,37 @@ public class QuestaoDAO {
 
     public void criarQuestao(Questao q){
 
-        String sql= "insert into questoes (enunciado,mat_professor) values (?,?)";
+        String sql= "insert into questoes (enunciado, mat_professor ) values (?,?)";
 
         try{
-            conexao = new ConnectionFactory ().getConnection();
+            conexao = new ConnectionFactory().getConnection();
             pst = conexao.prepareStatement(sql);
             //toUpperCase() converte a string para maiúsculo
+            
             pst.setString(1,q.getEnunciado().toUpperCase());
             pst.setLong(2, q.getMat_prof());
             pst.execute();
+            
         }catch(SQLException e){
-            e.getMessage();
+            e.printStackTrace();
         }
     }
 
     
     
+    public void deleteQuestao(int codigo){
+
+        String sql = "DELETE FROM questoes WHERE cod_questao = ?";
+        
+        try{
+            conexao = new ConnectionFactory().getConnection();
+            pst = conexao.prepareStatement(sql);
+            pst.setInt(1,codigo);
+            pst.execute();
+
+        }catch(Exception e){
+            e.getMessage();
+        }
+    }
+
 }
